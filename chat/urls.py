@@ -5,5 +5,5 @@ print("Running urls...")
 
 app_name = 'chat'
 urlpatterns = [
-    path('', views.main_page, name='main_page'),
+    path('', views.index, name='main_page'),
 ]
