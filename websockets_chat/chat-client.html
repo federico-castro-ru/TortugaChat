@@ -9,31 +9,29 @@
 </head>
 
 <body>
-    <div id="select-nickname">
-        <div class="overlay"></div>
+    <div id="joining-overlay">
         <div class="nickname-input-area">
             <label for="nickname-input">Type a nickname:</label>
-            <input type="text" name="nickname-input" id="nickname-input" autofocus="true">
-            <input type="submit" value="Ok" id="nickname-ok">
+            <input type="text" name="nickname-input" class="text-input" id="nickname-input" autofocus="true">
+            <input type="submit" class="submit-button" value="Connect" id="nickname-ok">
+        </div>
+
+        <div id="error-alert" class="hidden">
+            There was an error connecting to the server.
         </div>
     </div>
 
     <div class="main-content">
         <div class="chat">
             <!-- Chat log -->
-            <div id="chat-log">
-                <div class="message">
-                    <span class="sender">System</span>
-                    <span class="content">No messages before this!</span>
-                </div>
-            </div>
+            <div id="chat-log"></div>
 
             <!-- Message input -->
             <div id="message-area">
-                <textarea required contenteditable="true" name="message" id="message-input" type="text"
+                <textarea required contenteditable="true" name="message" id="message-input" type="text" class="text-input"
                     placeholder="Type a message..." autocomplete="off" minlength="1" maxlength="4096" rows="1"
                     autofocus="true" wrap="soft"></textarea>
-                <input type="button" id="send-button" value="Send" />
+                <input class="submit-button" type="button" id="send-button" value="Send" />
             </div>
         </div>
     </div>
