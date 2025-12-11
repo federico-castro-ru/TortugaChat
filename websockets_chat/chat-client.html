@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="./chat-client-style.css">
+</head>
+
+<body>
+    <div id="select-nickname">
+        <div class="overlay"></div>
+        <div class="nickname-input-area">
+            <label for="nickname-input">Type a nickname:</label>
+            <input type="text" name="nickname-input" id="nickname-input" autofocus="true">
+            <input type="submit" value="Ok" id="nickname-ok">
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="chat">
+            <!-- Chat log -->
+            <div id="chat-log">
+                <div class="message">
+                    <span class="sender">System</span>
+                    <span class="content">No messages before this!</span>
+                </div>
+            </div>
+
+            <!-- Message input -->
+            <div id="message-area">
+                <textarea required contenteditable="true" name="message" id="message-input" type="text"
+                    placeholder="Type a message..." autocomplete="off" minlength="1" maxlength="4096" rows="1"
+                    autofocus="true" wrap="soft"></textarea>
+                <input type="button" id="send-button" value="Send" />
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./chat-client-script.js"></script>
+
+</html>

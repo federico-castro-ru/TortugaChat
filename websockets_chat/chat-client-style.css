@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111;
+    color: #f4f4f4;
+    font-family: "Segoe UI";
+    line-height: 150%;
+}
+
+.title {
+    text-align: center;
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#select-nickname {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0008;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.nickname-input-area {
+    background: #111;
+    padding: 10px 20px;
+    border: 3px solid #fff8;
+    border-radius: 5px;
+    width: max-content;
+    z-index: 11;
+}
+
+.select-nickname .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    top: 0; left: 0;
+}
+
+.main-content {
+    margin: 1rem auto;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chat {
+    border-radius: 10px;
+    padding: 16px;
+    max-width: 1024px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow-y: auto;
+}
+
+#chat-log {
+    background: none;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    margin: 5px 0;
+}
+.message > .sender {
+    margin-right: 1ch;
+    background: #c9c9c9;
+    color: black;
+    padding: 2px 6px;
+    border-radius: 5px;
+}
+.message.from-server {
+    color: yellow;
+}
+
+#message-area {
+    display: flex;
+    align-items: center;
+}
+
+#message-input {
+    width: 100%;
+    font-size: inherit;
+    font-family: inherit;
+    background: none;
+    color: white;
+    border: 3px solid #fff8;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+    resize: none;
+    max-height: 6lh;
+    overflow-y: auto;
+    field-sizing: content;
+}
+
+#send-button {
+    font-size: inherit;
+    background: white;
+    border-radius: 20px;
+    padding: 10px 15px;
+    height: 2lh;
+}
